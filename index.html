@@ -6,7 +6,7 @@
     <script src="https://unpkg.com/cronstrue@latest/dist/cronstrue.min.js"></script>
   </head>
   <body>
-    <p class="output">please enter cron string via URL: https://servername/cronstring</p>
+    <p id="output">please enter cron string via URL: https://servername/cronstring</p>
     <script>
       const cronInput = new URL(window.location.href).pathname;
       try {
