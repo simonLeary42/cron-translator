@@ -8,7 +8,7 @@
   <body>
     <p id="output">please enter cron string via URL: https://servername?input=cronstring</p>
     <script>
-      const cronInput = new URL(window.location.href).get("input");
+      const cronInput = new URLSearchParams(new URL(window.location.href).search).get("input");
       try {
         document.getElementById("output").textContent = cronstrue.toString(cronInput);
       } catch (error) {
